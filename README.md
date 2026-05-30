@@ -37,7 +37,7 @@ The base (non-PoE) USW-Flex-2.5G-8 is only 76 mm deep — if that's your unit, s
 | Walls / top plate | 2.5 mm / 6.0 mm |
 | Retention rails | 5 mm tall, 5 mm overhang, 45° underside (open bottom) |
 | Magnets | 6 × ⌀20 × 3 mm discs, pockets ⌀20.1 × 3 mm, 3×2 grid |
-| Honeycomb | ⌀7 mm hexes, 2 mm gap, 5 mm border — 123 holes (30 + 30 sides, 63 rear) |
+| Honeycomb | ⌀7 mm hexes, 2 mm gap, 5 mm border — 26 holes (6 + 6 sides, 14 rear) |
 
 ## Printing
 
