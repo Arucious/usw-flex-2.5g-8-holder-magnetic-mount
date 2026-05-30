@@ -266,7 +266,9 @@ for side in (+1, -1):
 # EXPORT
 # ---------------------------------------------------------------------------
 export_stl(cradle, STL_PATH)
-export_step(cradle, STEP_PATH)
+# Fixed timestamp -> deterministic STEP output (otherwise build123d stamps the
+# current time and the file shows as modified on every run).
+export_step(cradle, STEP_PATH, timestamp="2026-05-30T00:00:00")
 
 bbox = cradle.bounding_box()
 
