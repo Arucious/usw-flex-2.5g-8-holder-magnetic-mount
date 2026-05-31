@@ -31,13 +31,17 @@ The base (non-PoE) USW-Flex-2.5G-8 is only 76 mm deep — if that's your unit, s
 
 | | |
 |---|---|
-| Switch (held) | 212.9 × 99.4 × 33.5 mm (PoE) |
-| Cavity clearance | 0.8 / 1.0 / 0.6 mm (L / W / H) — looser than the brick cradle |
-| Overall size | 218.7 × 102.9 × 45.1 mm |
+| Switch (held) | 212.9 × 99.4 × **26.0** mm — height per fit test (see note) |
+| Cavity clearance | 0.8 / 1.0 / 1.5 mm (L / W / H) |
+| Overall size | 218.7 × 102.9 × **38.5** mm |
 | Walls / top plate | 2.5 mm / 6.0 mm |
 | Retention rails | 5 mm tall, 5 mm overhang, 45° underside (open bottom) |
 | Magnets | 6 × ⌀20 × 3 mm discs, pockets ⌀20.1 × 3 mm, 3×2 grid |
-| Honeycomb | ⌀7 mm hexes, 2 mm gap, 5 mm border — 26 holes (6 + 6 sides, 14 rear) |
+| Honeycomb | ⌀3.0 mm hexes, 1.5 mm gap, 4 mm border — 174 holes, 3 rows (41 + 41 sides, 92 rear) |
+
+> **Height note:** the official PoE datasheet lists 33.5 mm, but a first print left an
+> ~8 mm gap above the switch — the real seated height is ~26 mm (the spec figure
+> likely includes feet/standoffs). `SWITCH_H` is set to the measured value.
 
 ## Printing
 

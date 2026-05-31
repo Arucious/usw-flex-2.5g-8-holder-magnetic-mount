@@ -47,12 +47,16 @@ from build123d import (
 # --- The switch being held (Ubiquiti USW-Flex-2.5G-8-PoE, official dims) ---
 SWITCH_L = 212.9   # length  (X)
 SWITCH_W = 99.4    # depth   (Y, insertion direction)
-SWITCH_H = 33.5    # height  (Z)
+SWITCH_H = 26.0    # height  (Z). NOTE: the official PoE datasheet says 33.5 mm,
+                   # but the first print left an ~8.16 mm gap above the switch ->
+                   # working back (34.1 mm cavity - 8.16 mm gap), the real seated
+                   # height is ~26 mm. The fit test is authoritative for the
+                   # cradle; the 33.5 spec likely includes feet/standoffs.
 
 # --- Fit (looser than the brick, which was hard to insert at 0.5 mm width) ---
 CLEARANCE_L = 0.8  # X (the ends gripped by the side walls)
 CLEARANCE_W = 1.0  # Y (slide-in direction -- generous, no effect on hold)
-CLEARANCE_H = 0.6  # Z
+CLEARANCE_H = 1.5  # Z (gap above the switch -- comfortable, not snug)
 
 WALL = 2.5         # side + rear wall thickness
 TOP_THICK = 6.0    # top (magnet) plate thickness; pockets cut from the desk side
@@ -74,9 +78,11 @@ RAIL_THICK = 5.0    # how far each rail stands proud of the bottom edge (Z)
 RAIL_OVERHANG = 5.0 # how far each rail reaches inward over the switch (X)
 
 # --- Honeycomb venting (rear wall + both side walls) ---
-HEX_CIRCUMRADIUS = 7.0  # hexagon size: centre -> vertex (the hole radius)
-HEX_GAP = 2.0           # solid wall remaining between adjacent hexes
-HEX_BORDER = 5.0        # solid, un-perforated border around each vented region
+HEX_CIRCUMRADIUS = 3.0  # hexagon size: centre -> vertex (the hole radius).
+                        # 3.0 mm fits 3 staggered rows in the ~27.5 mm cavity for
+                        # a proper honeycomb (7 mm gave a single row).
+HEX_GAP = 1.5           # solid wall remaining between adjacent hexes
+HEX_BORDER = 4.0        # solid, un-perforated border around each vented region
 
 # --- Output ---
 STL_PATH = "switch_cradle.stl"
